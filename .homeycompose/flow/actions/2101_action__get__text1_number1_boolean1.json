@@ -1,0 +1,81 @@
+{
+    "id": "action__get__text1_number1_boolean1",
+    "title": {
+        "en": "Read JSON (1*3 arguments)",
+        "nl": "Lees JSON (1*3 arguments)"
+    },
+    "titleFormatted": {
+        "en": "Read JSON [[json]], [[property_text1]], [[property_number1]], [[property_boolean1]]",
+        "nl": "Lees JSON [[json]], [[property_text1]], [[property_number1]], [[property_boolean1]]"
+    },
+    "tokens": [
+        {
+            "type": "string",
+            "name": "text1",
+            "title": {
+                "en": "Text 1",
+                "nl": "Tekst 1"
+            }
+        },
+
+        {
+            "type": "number",
+            "name": "number1",
+            "title": {
+                "en": "Number 1",
+                "nl": "Nummer 1"
+            }
+        },
+
+        {
+            "type": "boolean",
+            "name": "boolean1",
+            "title": {
+                "en": "Yes/No 1",
+                "nl": "Ja/Nee 1"
+            }
+        }
+
+
+    ],
+    "args": [
+        {
+            "type": "text",
+            "name": "json",
+            "placeholder": {
+                "en": "Existing JSON",
+                "nl": " Bestaande JSON"
+            }
+        },
+
+        {
+            "type": "text",
+            "name": "property_text1",
+            "placeholder": {
+                "en": "Property Path Text 1",
+                "nl": "Eigenschap Pad Tekst 1"
+            },
+            "required":false
+        },
+
+        {
+            "type": "text",
+            "name": "property_number1",
+            "placeholder": {
+                "en": "Property Path Number 1",
+                "nl": "Eigenschap Pad Nummer 1"
+            },
+            "required":false
+        },
+
+        {
+            "type": "text",
+            "name": "property_boolean1",
+            "placeholder": {
+                "en": "Property Path Yes/No 1",
+                "nl": "Eigenschap Pad Ja/Nee 1"
+            },
+            "required":false
+        }
+    ]
+}

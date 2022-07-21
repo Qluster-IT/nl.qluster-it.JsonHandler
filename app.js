@@ -33,6 +33,7 @@ class MyApp extends Homey.App {
       { id: 'action__set__json5' },
       { id: 'action__set__json10' },
       
+      { id: 'action__get__text1_number1_boolean1' },
       { id: 'action__get__text3_number3_boolean3' },
       { id: 'action__get__text5_number5_boolean5' },
       { id: 'action__get__text10_number10_boolean10' }
@@ -68,9 +69,9 @@ class MyApp extends Homey.App {
           let json = JSON.parse(args.json);
           var returnObject = {};
 
-          for (let j = 1; j <= action.textCount; j++) returnObject[args['text'+j.toString()]] = this.getJsonValue(json, args['property_text'+j.toString()], ' ');
-          for (let j = 1; j <= action.numberCount; j++) returnObject[args['number'+j.toString()]] = this.getJsonValue(json, args['property_number'+j.toString()], 0);
-          for (let j = 1; j <= action.booleanCount; j++) returnObject[args['boolean'+j.toString()]] = this.getJsonValue(json, args['property_boolean'+j.toString()], false);
+          for (let j = 1; j <= action.textCount; j++) returnObject['text'+j.toString()] = this.getJsonValue(json, args['property_text'+j.toString()], ' ');
+          for (let j = 1; j <= action.numberCount; j++) returnObject['number'+j.toString()] = this.getJsonValue(json, args['property_number'+j.toString()], 0);
+          for (let j = 1; j <= action.booleanCount; j++) returnObject['boolean'+j.toString()] = this.getJsonValue(json, args['property_boolean'+j.toString()], false);
           
           return returnObject;
           
