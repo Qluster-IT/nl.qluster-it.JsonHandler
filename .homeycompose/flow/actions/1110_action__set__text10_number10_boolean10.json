@@ -383,7 +383,7 @@
             "required":false
         },
         {
-            "type": "checkbox",
+            "type": "text",
             "name": "boolean1",
             "placeholder": {
                 "en": "Yes/No 1",
@@ -400,7 +400,7 @@
             "required":false
         },
         {
-            "type": "checkbox",
+            "type": "text",
             "name": "boolean2",
             "placeholder": {
                 "en": "Yes/No 2",
@@ -417,7 +417,7 @@
             "required":false
         },
         {
-            "type": "checkbox",
+            "type": "text",
             "name": "boolean3",
             "placeholder": {
                 "en": "Yes/No 3",
@@ -434,7 +434,7 @@
             "required":false
         },
         {
-            "type": "checkbox",
+            "type": "text",
             "name": "boolean4",
             "placeholder": {
                 "en": "Yes/No 4",
@@ -451,7 +451,7 @@
             "required":false
         },
         {
-            "type": "checkbox",
+            "type": "text",
             "name": "boolean5",
             "placeholder": {
                 "en": "Yes/No 5",
@@ -468,7 +468,7 @@
             "required":false
         },
         {
-            "type": "checkbox",
+            "type": "text",
             "name": "boolean6",
             "placeholder": {
                 "en": "Yes/No 6",
@@ -485,7 +485,7 @@
             "required":false
         },
         {
-            "type": "checkbox",
+            "type": "text",
             "name": "boolean7",
             "placeholder": {
                 "en": "Yes/No 7",
@@ -502,7 +502,7 @@
             "required":false
         },
         {
-            "type": "checkbox",
+            "type": "text",
             "name": "boolean8",
             "placeholder": {
                 "en": "Yes/No 8",
@@ -519,7 +519,7 @@
             "required":false
         },
         {
-            "type": "checkbox",
+            "type": "text",
             "name": "boolean9",
             "placeholder": {
                 "en": "Yes/No 9",
@@ -536,7 +536,7 @@
             "required":false
         },
         {
-            "type": "checkbox",
+            "type": "text",
             "name": "boolean10",
             "placeholder": {
                 "en": "Yes/No 10",

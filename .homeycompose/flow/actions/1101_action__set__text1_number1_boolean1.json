@@ -77,7 +77,7 @@
             "required":false
         },
         {
-            "type": "checkbox",
+            "type": "text",
             "name": "boolean1",
             "placeholder": {
                 "en": "Yes/No 1",
