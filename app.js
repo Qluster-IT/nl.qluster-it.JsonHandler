@@ -31,7 +31,12 @@ class MyApp extends Homey.App {
       { id: 'action__set__text5_number5_boolean5' },
       { id: 'action__set__text10_number10_boolean10' },
       { id: 'action__set__json5' },
-      { id: 'action__set__json10' }
+      { id: 'action__set__json10' },
+      
+      { id: 'action__get__text1_number1_boolean1' },
+      { id: 'action__get__text3_number3_boolean3' },
+      { id: 'action__get__text5_number5_boolean5' },
+      { id: 'action__get__text10_number10_boolean10' }
     ];
     for (let i = 0; i < actions.length; i++) {
       const action = actions[i];
@@ -61,13 +66,14 @@ class MyApp extends Homey.App {
         try {
           console.log(action.id + '.registerRunListener args: ');
           console.log(args);
-          var returnObject = args.json ? JSON.parse(args.json) : {};
+          let json = JSON.parse(args.json);
+          var returnObject = {};
 
-          for (let j = 1; j <= action.textCount; j++) if (args['property_text'+j.toString()] && args['text'+j.toString()]!==undefined) returnObject[args['property_text'+j.toString()]] = args['text'+j.toString()];
-          for (let j = 1; j <= action.numberCount; j++) if (args['property_number'+j.toString()] && args['number'+j.toString()]!==undefined) returnObject[args['property_number'+j.toString()]] = args['number'+j.toString()];
-          for (let j = 1; j <= action.booleanCount; j++) if (args['property_boolean'+j.toString()] && args['boolean'+j.toString()]!==undefined) returnObject[args['property_boolean'+j.toString()]] = args['boolean'+j.toString()];
-
-          return {json:JSON.stringify(returnObject)};
+          for (let j = 1; j <= action.textCount; j++) returnObject['text'+j.toString()] = this.getJsonValue(json, args['property_text'+j.toString()], ' ');
+          for (let j = 1; j <= action.numberCount; j++) returnObject['number'+j.toString()] = this.getJsonValue(json, args['property_number'+j.toString()], 0);
+          for (let j = 1; j <= action.booleanCount; j++) returnObject['boolean'+j.toString()] = this.getJsonValue(json, args['property_boolean'+j.toString()], false);
+          
+          return returnObject;
           
         } catch (error) {
           console.log('Error: ' + error);
@@ -90,6 +96,19 @@ class MyApp extends Homey.App {
         else if(type.startsWith('boolean')) card.booleanCount = Number.parseInt(type.replace('boolean',''));    
         else if(type.startsWith('json')) card.jsonCount = Number.parseInt(type.replace('json',''));    
       }
+  }
+
+  getJsonValue(json, path, retur) {
+    if((json===undefined || json===null) || (path===undefined || path===null)) return retur;
+    let paths = path.split('.');
+    var activeObj = json;
+    for (let i = 0; i < paths.length; i++) {
+      if(i==paths.length-1) return activeObj[paths[i]];
+      else if (activeObj[paths[i]]) {
+        activeObj = activeObj[paths[i]];
+      } else return retur;
+    }
+    return retur;
   }
 
   setJson(json, path, value) {
