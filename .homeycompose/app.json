@@ -1,0 +1,43 @@
+{
+  "id": "nl.qluster-it.JsonHandler",
+  "version": "1.0.0",
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
+  "brandColor": "#730000",
+  "platforms": [
+    "local"
+  ],
+  "name": {
+    "en": "JSON Handler"
+  },
+  "description": {
+    "en": "JSON handler and manipulator"
+  },
+  "tags": {
+    "en": ["JSON", "Advanced", "Handler", "Manipulator"]
+  },
+  "category": [
+    "tools"
+  ],
+  "permissions": [],
+  "images": {
+    "small": "/assets/images/small.png",
+    "large": "/assets/images/large.png"
+  },
+  "source": "https://bitbucket.org/QlusterIT/nl.qluster-it.jsonhandler/",
+  "bugs": {
+    "url": "https://bitbucket.org/QlusterIT/nl.qluster-it.jsonhandler/issues"
+  },
+  "homeyCommunityTopicId": 66317,
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "QlusterIT"
+      }
+    }
+  },
+  "author": {
+    "name": "Arie J. Godschalk",
+    "email": "arie@qluster-it.nl"
+  }
+}

@@ -1,0 +1,1541 @@
+{
+  "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
+  "id": "nl.qluster-it.JsonHandler",
+  "version": "1.0.0",
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
+  "brandColor": "#730000",
+  "platforms": [
+    "local"
+  ],
+  "name": {
+    "en": "JSON Handler"
+  },
+  "description": {
+    "en": "JSON handler and manipulator"
+  },
+  "tags": {
+    "en": [
+      "JSON",
+      "Advanced",
+      "Handler",
+      "Manipulator"
+    ]
+  },
+  "category": [
+    "tools"
+  ],
+  "permissions": [],
+  "images": {
+    "small": "/assets/images/small.png",
+    "large": "/assets/images/large.png"
+  },
+  "source": "https://bitbucket.org/QlusterIT/nl.qluster-it.jsonhandler/",
+  "bugs": {
+    "url": "https://bitbucket.org/QlusterIT/nl.qluster-it.jsonhandler/issues"
+  },
+  "homeyCommunityTopicId": 66317,
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "QlusterIT"
+      }
+    }
+  },
+  "author": {
+    "name": "Arie J. Godschalk",
+    "email": "arie@qluster-it.nl"
+  },
+  "flow": {
+    "actions": [
+      {
+        "id": "action__set__text1_number1_boolean1",
+        "title": {
+          "en": "Build JSON (1*3 arguments)",
+          "nl": "Bouw JSON (1*3 arguments)"
+        },
+        "titleFormatted": {
+          "en": "Build JSON ([[json]]) [[property_text1]]=[[text1]], [[property_number1]]=[[number1]], [[property_boolean1]]=[[boolean1]]",
+          "nl": "Bouw JSON ([[json]]) [[property_text1]]=[[text1]], [[property_number1]]=[[number1]], [[property_boolean1]]=[[boolean1]]"
+        },
+        "tokens": [
+          {
+            "type": "string",
+            "name": "json",
+            "title": {
+              "en": "JSON",
+              "nl": " JSON"
+            }
+          }
+        ],
+        "args": [
+          {
+            "type": "text",
+            "name": "json",
+            "placeholder": {
+              "en": "Existing JSON",
+              "nl": " Bestaande JSON"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_text1",
+            "placeholder": {
+              "en": "Property Path Text 1",
+              "nl": "Eigenschap Pad Tekst 1"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "text1",
+            "placeholder": {
+              "en": "Text 1",
+              "nl": "Tekst 1"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_number1",
+            "placeholder": {
+              "en": "Property Path Number 1",
+              "nl": "Eigenschap Pad Nummer 1"
+            },
+            "required": false
+          },
+          {
+            "type": "number",
+            "name": "number1",
+            "placeholder": {
+              "en": "Number 1",
+              "nl": "Nummer 1"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_boolean1",
+            "placeholder": {
+              "en": "Property Path Yes/No 1",
+              "nl": "Eigenschap Pad Ja/Nee 1"
+            },
+            "required": false
+          },
+          {
+            "type": "checkbox",
+            "name": "boolean1",
+            "placeholder": {
+              "en": "Yes/No 1",
+              "nl": "Ja/Nee 1"
+            },
+            "required": false
+          }
+        ]
+      },
+      {
+        "id": "action__set__text3_number3_boolean3",
+        "title": {
+          "en": "Build JSON (3*3 arguments)",
+          "nl": "Bouw JSON (3*3 arguments)"
+        },
+        "titleFormatted": {
+          "en": "Build JSON ([[json]]) [[property_text1]]=[[text1]], [[property_text2]]=[[text2]], [[property_text3]]=[[text3]], [[property_number1]]=[[number1]], [[property_number2]]=[[number2]], [[property_number3]]=[[number3]], [[property_boolean1]]=[[boolean1]], [[property_boolean2]]=[[boolean2]], [[property_boolean3]]=[[boolean3]]",
+          "nl": "Bouw JSON ([[json]]) [[property_text1]]=[[text1]], [[property_text2]]=[[text2]], [[property_text3]]=[[text3]], [[property_number1]]=[[number1]], [[property_number2]]=[[number2]], [[property_number3]]=[[number3]], [[property_boolean1]]=[[boolean1]], [[property_boolean2]]=[[boolean2]], [[property_boolean3]]=[[boolean3]]"
+        },
+        "tokens": [
+          {
+            "type": "string",
+            "name": "json",
+            "title": {
+              "en": "JSON",
+              "nl": " JSON"
+            }
+          }
+        ],
+        "args": [
+          {
+            "type": "text",
+            "name": "json",
+            "placeholder": {
+              "en": "Existing JSON",
+              "nl": " Bestaande JSON"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_text1",
+            "placeholder": {
+              "en": "Property Path Text 1",
+              "nl": "Eigenschap Pad Tekst 1"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "text1",
+            "placeholder": {
+              "en": "Text 1",
+              "nl": "Tekst 1"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_text2",
+            "placeholder": {
+              "en": "Property Path Text 2",
+              "nl": "Eigenschap Pad Tekst 2"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "text2",
+            "placeholder": {
+              "en": "Text 2",
+              "nl": "Tekst 2"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_text3",
+            "placeholder": {
+              "en": "Property Path Text 3",
+              "nl": "Eigenschap Pad Tekst 3"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "text3",
+            "placeholder": {
+              "en": "Text 3",
+              "nl": "Tekst 3"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_number1",
+            "placeholder": {
+              "en": "Property Path Number 1",
+              "nl": "Eigenschap Pad Nummer 1"
+            },
+            "required": false
+          },
+          {
+            "type": "number",
+            "name": "number1",
+            "placeholder": {
+              "en": "Number 1",
+              "nl": "Nummer 1"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_number2",
+            "placeholder": {
+              "en": "Property Path Number 2",
+              "nl": "Eigenschap Pad Nummer 2"
+            },
+            "required": false
+          },
+          {
+            "type": "number",
+            "name": "number2",
+            "placeholder": {
+              "en": "Number 2",
+              "nl": "Nummer 2"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_number3",
+            "placeholder": {
+              "en": "Property Path Number 3",
+              "nl": "Eigenschap Pad Nummer 3"
+            },
+            "required": false
+          },
+          {
+            "type": "number",
+            "name": "number3",
+            "placeholder": {
+              "en": "Number 3",
+              "nl": "Nummer 3"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_boolean1",
+            "placeholder": {
+              "en": "Property Path Yes/No 1",
+              "nl": "Eigenschap Pad Ja/Nee 1"
+            },
+            "required": false
+          },
+          {
+            "type": "checkbox",
+            "name": "boolean1",
+            "placeholder": {
+              "en": "Yes/No 1",
+              "nl": "Ja/Nee 1"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_boolean2",
+            "placeholder": {
+              "en": "Property Path Yes/No 2",
+              "nl": "Eigenschap Pad Ja/Nee 2"
+            },
+            "required": false
+          },
+          {
+            "type": "checkbox",
+            "name": "boolean2",
+            "placeholder": {
+              "en": "Yes/No 2",
+              "nl": "Ja/Nee 2"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_boolean3",
+            "placeholder": {
+              "en": "Property Path Yes/No 3",
+              "nl": "Eigenschap Pad Ja/Nee 3"
+            },
+            "required": false
+          },
+          {
+            "type": "checkbox",
+            "name": "boolean3",
+            "placeholder": {
+              "en": "Yes/No 3",
+              "nl": "Ja/Nee 3"
+            },
+            "required": false
+          }
+        ]
+      },
+      {
+        "id": "action__set__text5_number5_boolean5",
+        "title": {
+          "en": "Build JSON (5*3 arguments)",
+          "nl": "Bouw JSON (5*3 arguments)"
+        },
+        "titleFormatted": {
+          "en": "Build JSON ([[json]]) [[property_text1]]=[[text1]], [[property_text2]]=[[text2]], [[property_text3]]=[[text3]], [[property_text4]]=[[text4]], [[property_text5]]=[[text5]], [[property_number1]]=[[number1]], [[property_number2]]=[[number2]], [[property_number3]]=[[number3]], [[property_number4]]=[[number4]], [[property_number5]]=[[number5]], [[property_boolean1]]=[[boolean1]], [[property_boolean2]]=[[boolean2]], [[property_boolean3]]=[[boolean3]], [[property_boolean4]]=[[boolean4]], [[property_boolean5]]=[[boolean5]]",
+          "nl": "Bouw JSON ([[json]]) [[property_text1]]=[[text1]], [[property_text2]]=[[text2]], [[property_text3]]=[[text3]], [[property_text4]]=[[text4]], [[property_text5]]=[[text5]], [[property_number1]]=[[number1]], [[property_number2]]=[[number2]], [[property_number3]]=[[number3]], [[property_number4]]=[[number4]], [[property_number5]]=[[number5]], [[property_boolean1]]=[[boolean1]], [[property_boolean2]]=[[boolean2]], [[property_boolean3]]=[[boolean3]], [[property_boolean4]]=[[boolean4]], [[property_boolean5]]=[[boolean5]]"
+        },
+        "tokens": [
+          {
+            "type": "string",
+            "name": "json",
+            "title": {
+              "en": "JSON",
+              "nl": " JSON"
+            }
+          }
+        ],
+        "args": [
+          {
+            "type": "text",
+            "name": "json",
+            "placeholder": {
+              "en": "Existing JSON",
+              "nl": " Bestaande JSON"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_text1",
+            "placeholder": {
+              "en": "Property Path Text 1",
+              "nl": "Eigenschap Pad Tekst 1"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "text1",
+            "placeholder": {
+              "en": "Text 1",
+              "nl": "Tekst 1"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_text2",
+            "placeholder": {
+              "en": "Property Path Text 2",
+              "nl": "Eigenschap Pad Tekst 2"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "text2",
+            "placeholder": {
+              "en": "Text 2",
+              "nl": "Tekst 2"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_text3",
+            "placeholder": {
+              "en": "Property Path Text 3",
+              "nl": "Eigenschap Pad Tekst 3"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "text3",
+            "placeholder": {
+              "en": "Text 3",
+              "nl": "Tekst 3"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_text4",
+            "placeholder": {
+              "en": "Property Path Text 4",
+              "nl": "Eigenschap Pad Tekst 4"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "text4",
+            "placeholder": {
+              "en": "Text 4",
+              "nl": "Tekst 4"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_text5",
+            "placeholder": {
+              "en": "Property Path Text 5",
+              "nl": "Eigenschap Pad Tekst 5"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "text5",
+            "placeholder": {
+              "en": "Text 5",
+              "nl": "Tekst 5"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_number1",
+            "placeholder": {
+              "en": "Property Path Number 1",
+              "nl": "Eigenschap Pad Nummer 1"
+            },
+            "required": false
+          },
+          {
+            "type": "number",
+            "name": "number1",
+            "placeholder": {
+              "en": "Number 1",
+              "nl": "Nummer 1"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_number2",
+            "placeholder": {
+              "en": "Property Path Number 2",
+              "nl": "Eigenschap Pad Nummer 2"
+            },
+            "required": false
+          },
+          {
+            "type": "number",
+            "name": "number2",
+            "placeholder": {
+              "en": "Number 2",
+              "nl": "Nummer 2"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_number3",
+            "placeholder": {
+              "en": "Property Path Number 3",
+              "nl": "Eigenschap Pad Nummer 3"
+            },
+            "required": false
+          },
+          {
+            "type": "number",
+            "name": "number3",
+            "placeholder": {
+              "en": "Number 3",
+              "nl": "Nummer 3"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_number4",
+            "placeholder": {
+              "en": "Property Path Number 4",
+              "nl": "Eigenschap Pad Nummer 4"
+            },
+            "required": false
+          },
+          {
+            "type": "number",
+            "name": "number4",
+            "placeholder": {
+              "en": "Number 4",
+              "nl": "Nummer 4"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_number5",
+            "placeholder": {
+              "en": "Property Path Number 5",
+              "nl": "Eigenschap Pad Nummer 5"
+            },
+            "required": false
+          },
+          {
+            "type": "number",
+            "name": "number5",
+            "placeholder": {
+              "en": "Number 5",
+              "nl": "Nummer 5"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_boolean1",
+            "placeholder": {
+              "en": "Property Path Yes/No 1",
+              "nl": "Eigenschap Pad Ja/Nee 1"
+            },
+            "required": false
+          },
+          {
+            "type": "checkbox",
+            "name": "boolean1",
+            "placeholder": {
+              "en": "Yes/No 1",
+              "nl": "Ja/Nee 1"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_boolean2",
+            "placeholder": {
+              "en": "Property Path Yes/No 2",
+              "nl": "Eigenschap Pad Ja/Nee 2"
+            },
+            "required": false
+          },
+          {
+            "type": "checkbox",
+            "name": "boolean2",
+            "placeholder": {
+              "en": "Yes/No 2",
+              "nl": "Ja/Nee 2"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_boolean3",
+            "placeholder": {
+              "en": "Property Path Yes/No 3",
+              "nl": "Eigenschap Pad Ja/Nee 3"
+            },
+            "required": false
+          },
+          {
+            "type": "checkbox",
+            "name": "boolean3",
+            "placeholder": {
+              "en": "Yes/No 3",
+              "nl": "Ja/Nee 3"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_boolean4",
+            "placeholder": {
+              "en": "Property Path Yes/No 4",
+              "nl": "Eigenschap Pad Ja/Nee 4"
+            },
+            "required": false
+          },
+          {
+            "type": "checkbox",
+            "name": "boolean4",
+            "placeholder": {
+              "en": "Yes/No 4",
+              "nl": "Ja/Nee 4"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_boolean5",
+            "placeholder": {
+              "en": "Property Path Yes/No 5",
+              "nl": "Eigenschap Pad Ja/Nee 5"
+            },
+            "required": false
+          },
+          {
+            "type": "checkbox",
+            "name": "boolean5",
+            "placeholder": {
+              "en": "Yes/No 5",
+              "nl": "Ja/Nee 5"
+            },
+            "required": false
+          }
+        ]
+      },
+      {
+        "id": "action__set__text10_number10_boolean10",
+        "title": {
+          "en": "Build JSON (10*3 arguments)",
+          "nl": "Bouw JSON (10*3 arguments)"
+        },
+        "titleFormatted": {
+          "en": "Build JSON ([[json]]) [[property_text1]]=[[text1]], [[property_text2]]=[[text2]], [[property_text3]]=[[text3]], [[property_text4]]=[[text4]], [[property_text5]]=[[text5]], [[property_text6]]=[[text6]], [[property_text7]]=[[text7]], [[property_text8]]=[[text8]], [[property_text9]]=[[text9]], [[property_text10]]=[[text10]], [[property_number1]]=[[number1]], [[property_number2]]=[[number2]], [[property_number3]]=[[number3]], [[property_number4]]=[[number4]], [[property_number5]]=[[number5]], [[property_number6]]=[[number6]], [[property_number7]]=[[number7]], [[property_number8]]=[[number8]], [[property_number9]]=[[number9]], [[property_number10]]=[[number10]], [[property_boolean1]]=[[boolean1]], [[property_boolean2]]=[[boolean2]], [[property_boolean3]]=[[boolean3]], [[property_boolean4]]=[[boolean4]], [[property_boolean5]]=[[boolean5]], [[property_boolean6]]=[[boolean6]], [[property_boolean7]]=[[boolean7]], [[property_boolean8]]=[[boolean8]], [[property_boolean9]]=[[boolean9]], [[property_boolean10]]=[[boolean10]]",
+          "nl": "Bouw JSON ([[json]]) [[property_text1]]=[[text1]], [[property_text2]]=[[text2]], [[property_text3]]=[[text3]], [[property_text4]]=[[text4]], [[property_text5]]=[[text5]], [[property_text6]]=[[text6]], [[property_text7]]=[[text7]], [[property_text8]]=[[text8]], [[property_text9]]=[[text9]], [[property_text10]]=[[text10]], [[property_number1]]=[[number1]], [[property_number2]]=[[number2]], [[property_number3]]=[[number3]], [[property_number4]]=[[number4]], [[property_number5]]=[[number5]], [[property_number6]]=[[number6]], [[property_number7]]=[[number7]], [[property_number8]]=[[number8]], [[property_number9]]=[[number9]], [[property_number10]]=[[number10]], [[property_boolean1]]=[[boolean1]], [[property_boolean2]]=[[boolean2]], [[property_boolean3]]=[[boolean3]], [[property_boolean4]]=[[boolean4]], [[property_boolean5]]=[[boolean5]], [[property_boolean6]]=[[boolean6]], [[property_boolean7]]=[[boolean7]], [[property_boolean8]]=[[boolean8]], [[property_boolean9]]=[[boolean9]], [[property_boolean10]]=[[boolean10]]"
+        },
+        "tokens": [
+          {
+            "type": "string",
+            "name": "json",
+            "title": {
+              "en": "JSON",
+              "nl": " JSON"
+            }
+          }
+        ],
+        "args": [
+          {
+            "type": "text",
+            "name": "json",
+            "placeholder": {
+              "en": "Existing JSON",
+              "nl": " Bestaande JSON"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_text1",
+            "placeholder": {
+              "en": "Property Path Text 1",
+              "nl": "Eigenschap Pad Tekst 1"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "text1",
+            "placeholder": {
+              "en": "Text 1",
+              "nl": "Tekst 1"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_text2",
+            "placeholder": {
+              "en": "Property Path Text 2",
+              "nl": "Eigenschap Pad Tekst 2"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "text2",
+            "placeholder": {
+              "en": "Text 2",
+              "nl": "Tekst 2"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_text3",
+            "placeholder": {
+              "en": "Property Path Text 3",
+              "nl": "Eigenschap Pad Tekst 3"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "text3",
+            "placeholder": {
+              "en": "Text 3",
+              "nl": "Tekst 3"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_text4",
+            "placeholder": {
+              "en": "Property Path Text 4",
+              "nl": "Eigenschap Pad Tekst 4"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "text4",
+            "placeholder": {
+              "en": "Text 4",
+              "nl": "Tekst 4"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_text5",
+            "placeholder": {
+              "en": "Property Path Text 5",
+              "nl": "Eigenschap Pad Tekst 5"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "text5",
+            "placeholder": {
+              "en": "Text 5",
+              "nl": "Tekst 5"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_text6",
+            "placeholder": {
+              "en": "Property Path Text 6",
+              "nl": "Eigenschap Pad Tekst 6"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "text6",
+            "placeholder": {
+              "en": "Text 6",
+              "nl": "Tekst 6"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_text7",
+            "placeholder": {
+              "en": "Property Path Text 7",
+              "nl": "Eigenschap Pad Tekst 7"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "text7",
+            "placeholder": {
+              "en": "Text 7",
+              "nl": "Tekst 7"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_text8",
+            "placeholder": {
+              "en": "Property Path Text 8",
+              "nl": "Eigenschap Pad Tekst 8"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "text8",
+            "placeholder": {
+              "en": "Text 8",
+              "nl": "Tekst 8"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_text9",
+            "placeholder": {
+              "en": "Property Path Text 9",
+              "nl": "Eigenschap Pad Tekst 9"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "text9",
+            "placeholder": {
+              "en": "Text 9",
+              "nl": "Tekst 9"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_text10",
+            "placeholder": {
+              "en": "Property Path Text 10",
+              "nl": "Eigenschap Pad Tekst 10"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "text10",
+            "placeholder": {
+              "en": "Text 10",
+              "nl": "Tekst 10"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_number1",
+            "placeholder": {
+              "en": "Property Path Number 1",
+              "nl": "Eigenschap Pad Nummer 1"
+            },
+            "required": false
+          },
+          {
+            "type": "number",
+            "name": "number1",
+            "placeholder": {
+              "en": "Number 1",
+              "nl": "Nummer 1"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_number2",
+            "placeholder": {
+              "en": "Property Path Number 2",
+              "nl": "Eigenschap Pad Nummer 2"
+            },
+            "required": false
+          },
+          {
+            "type": "number",
+            "name": "number2",
+            "placeholder": {
+              "en": "Number 2",
+              "nl": "Nummer 2"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_number3",
+            "placeholder": {
+              "en": "Property Path Number 3",
+              "nl": "Eigenschap Pad Nummer 3"
+            },
+            "required": false
+          },
+          {
+            "type": "number",
+            "name": "number3",
+            "placeholder": {
+              "en": "Number 3",
+              "nl": "Nummer 3"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_number4",
+            "placeholder": {
+              "en": "Property Path Number 4",
+              "nl": "Eigenschap Pad Nummer 4"
+            },
+            "required": false
+          },
+          {
+            "type": "number",
+            "name": "number4",
+            "placeholder": {
+              "en": "Number 4",
+              "nl": "Nummer 4"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_number5",
+            "placeholder": {
+              "en": "Property Path Number 5",
+              "nl": "Eigenschap Pad Nummer 5"
+            },
+            "required": false
+          },
+          {
+            "type": "number",
+            "name": "number5",
+            "placeholder": {
+              "en": "Number 5",
+              "nl": "Nummer 5"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_number6",
+            "placeholder": {
+              "en": "Property Path Number 6",
+              "nl": "Eigenschap Pad Nummer 6"
+            },
+            "required": false
+          },
+          {
+            "type": "number",
+            "name": "number6",
+            "placeholder": {
+              "en": "Number 6",
+              "nl": "Nummer 6"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_number7",
+            "placeholder": {
+              "en": "Property Path Number 7",
+              "nl": "Eigenschap Pad Nummer 7"
+            },
+            "required": false
+          },
+          {
+            "type": "number",
+            "name": "number7",
+            "placeholder": {
+              "en": "Number 7",
+              "nl": "Nummer 7"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_number8",
+            "placeholder": {
+              "en": "Property Path Number 8",
+              "nl": "Eigenschap Pad Nummer 8"
+            },
+            "required": false
+          },
+          {
+            "type": "number",
+            "name": "number8",
+            "placeholder": {
+              "en": "Number 8",
+              "nl": "Nummer 8"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_number9",
+            "placeholder": {
+              "en": "Property Path Number 9",
+              "nl": "Eigenschap Pad Nummer 9"
+            },
+            "required": false
+          },
+          {
+            "type": "number",
+            "name": "number9",
+            "placeholder": {
+              "en": "Number 9",
+              "nl": "Nummer 9"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_number10",
+            "placeholder": {
+              "en": "Property Path Number 10",
+              "nl": "Eigenschap Pad Nummer 10"
+            },
+            "required": false
+          },
+          {
+            "type": "number",
+            "name": "number10",
+            "placeholder": {
+              "en": "Number 10",
+              "nl": "Nummer 10"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_boolean1",
+            "placeholder": {
+              "en": "Property Path Yes/No 1",
+              "nl": "Eigenschap Pad Ja/Nee 1"
+            },
+            "required": false
+          },
+          {
+            "type": "checkbox",
+            "name": "boolean1",
+            "placeholder": {
+              "en": "Yes/No 1",
+              "nl": "Ja/Nee 1"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_boolean2",
+            "placeholder": {
+              "en": "Property Path Yes/No 2",
+              "nl": "Eigenschap Pad Ja/Nee 2"
+            },
+            "required": false
+          },
+          {
+            "type": "checkbox",
+            "name": "boolean2",
+            "placeholder": {
+              "en": "Yes/No 2",
+              "nl": "Ja/Nee 2"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_boolean3",
+            "placeholder": {
+              "en": "Property Path Yes/No 3",
+              "nl": "Eigenschap Pad Ja/Nee 3"
+            },
+            "required": false
+          },
+          {
+            "type": "checkbox",
+            "name": "boolean3",
+            "placeholder": {
+              "en": "Yes/No 3",
+              "nl": "Ja/Nee 3"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_boolean4",
+            "placeholder": {
+              "en": "Property Path Yes/No 4",
+              "nl": "Eigenschap Pad Ja/Nee 4"
+            },
+            "required": false
+          },
+          {
+            "type": "checkbox",
+            "name": "boolean4",
+            "placeholder": {
+              "en": "Yes/No 4",
+              "nl": "Ja/Nee 4"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_boolean5",
+            "placeholder": {
+              "en": "Property Path Yes/No 5",
+              "nl": "Eigenschap Pad Ja/Nee 5"
+            },
+            "required": false
+          },
+          {
+            "type": "checkbox",
+            "name": "boolean5",
+            "placeholder": {
+              "en": "Yes/No 5",
+              "nl": "Ja/Nee 5"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_boolean6",
+            "placeholder": {
+              "en": "Property Path Yes/No 6",
+              "nl": "Eigenschap Pad Ja/Nee 6"
+            },
+            "required": false
+          },
+          {
+            "type": "checkbox",
+            "name": "boolean6",
+            "placeholder": {
+              "en": "Yes/No 6",
+              "nl": "Ja/Nee 6"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_boolean7",
+            "placeholder": {
+              "en": "Property Path Yes/No 7",
+              "nl": "Eigenschap Pad Ja/Nee 7"
+            },
+            "required": false
+          },
+          {
+            "type": "checkbox",
+            "name": "boolean7",
+            "placeholder": {
+              "en": "Yes/No 7",
+              "nl": "Ja/Nee 7"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_boolean8",
+            "placeholder": {
+              "en": "Property Path Yes/No 8",
+              "nl": "Eigenschap Pad Ja/Nee 8"
+            },
+            "required": false
+          },
+          {
+            "type": "checkbox",
+            "name": "boolean8",
+            "placeholder": {
+              "en": "Yes/No 8",
+              "nl": "Ja/Nee 8"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_boolean9",
+            "placeholder": {
+              "en": "Property Path Yes/No 9",
+              "nl": "Eigenschap Pad Ja/Nee 9"
+            },
+            "required": false
+          },
+          {
+            "type": "checkbox",
+            "name": "boolean9",
+            "placeholder": {
+              "en": "Yes/No 9",
+              "nl": "Ja/Nee 9"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_boolean10",
+            "placeholder": {
+              "en": "Property Path Yes/No 10",
+              "nl": "Eigenschap Pad Ja/Nee 10"
+            },
+            "required": false
+          },
+          {
+            "type": "checkbox",
+            "name": "boolean10",
+            "placeholder": {
+              "en": "Yes/No 10",
+              "nl": "Ja/Nee 10"
+            },
+            "required": false
+          }
+        ]
+      },
+      {
+        "id": "action__set__json5",
+        "title": {
+          "en": "Build JSON (5 Json's)",
+          "nl": "Bouw JSON (5 Json's)"
+        },
+        "titleFormatted": {
+          "en": "Build JSON ([[json]]) [[property_json1]]=[[json1]], [[property_json2]]=[[json2]], [[property_json3]]=[[json3]], [[property_json4]]=[[json4]], [[property_json5]]=[[json5]]",
+          "nl": "Bouw JSON ([[json]]) [[property_json1]]=[[json1]], [[property_json2]]=[[json2]], [[property_json3]]=[[json3]], [[property_json4]]=[[json4]], [[property_json5]]=[[json5]]"
+        },
+        "tokens": [
+          {
+            "type": "string",
+            "name": "json",
+            "title": {
+              "en": "JSON",
+              "nl": " JSON"
+            }
+          }
+        ],
+        "args": [
+          {
+            "type": "text",
+            "name": "json",
+            "placeholder": {
+              "en": "Existing JSON",
+              "nl": " Bestaande JSON"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_json1",
+            "placeholder": {
+              "en": "Property Path Json 1",
+              "nl": "Eigenschap Pad Json 1"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "json1",
+            "placeholder": {
+              "en": "Json 1",
+              "nl": "Json  1"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_json2",
+            "placeholder": {
+              "en": "Property Path Json 2",
+              "nl": "Eigenschap Pad Json 2"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "json2",
+            "placeholder": {
+              "en": "Json 2",
+              "nl": "Json  2"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_json3",
+            "placeholder": {
+              "en": "Property Path Json 3",
+              "nl": "Eigenschap Pad Json 3"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "json3",
+            "placeholder": {
+              "en": "Json 3",
+              "nl": "Json  3"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_json4",
+            "placeholder": {
+              "en": "Property Path Json 4",
+              "nl": "Eigenschap Pad Json 4"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "json4",
+            "placeholder": {
+              "en": "Json 4",
+              "nl": "Json  4"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_json5",
+            "placeholder": {
+              "en": "Property Path Json 5",
+              "nl": "Eigenschap Pad Json 5"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "json5",
+            "placeholder": {
+              "en": "Json 5",
+              "nl": "Json  5"
+            },
+            "required": false
+          }
+        ]
+      },
+      {
+        "id": "action__set__json10",
+        "title": {
+          "en": "Build JSON (10 Json's)",
+          "nl": "Bouw JSON (10 Json's)"
+        },
+        "titleFormatted": {
+          "en": "Build JSON ([[json]]) [[property_json1]]=[[json1]], [[property_json2]]=[[json2]], [[property_json3]]=[[json3]], [[property_json4]]=[[json4]], [[property_json5]]=[[json5]], [[property_json6]]=[[json6]], [[property_json7]]=[[json7]], [[property_json8]]=[[json8]], [[property_json9]]=[[json9]], [[property_json10]]=[[json10]]",
+          "nl": "Bouw JSON ([[json]]) [[property_json1]]=[[json1]], [[property_json2]]=[[json2]], [[property_json3]]=[[json3]], [[property_json4]]=[[json4]], [[property_json5]]=[[json5]], [[property_json6]]=[[json6]], [[property_json7]]=[[json7]], [[property_json8]]=[[json8]], [[property_json9]]=[[json9]], [[property_json10]]=[[json10]]"
+        },
+        "tokens": [
+          {
+            "type": "string",
+            "name": "json",
+            "title": {
+              "en": "JSON",
+              "nl": " JSON"
+            }
+          }
+        ],
+        "args": [
+          {
+            "type": "text",
+            "name": "json",
+            "placeholder": {
+              "en": "Existing JSON",
+              "nl": " Bestaande JSON"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_json1",
+            "placeholder": {
+              "en": "Property Path Json 1",
+              "nl": "Eigenschap Pad Json 1"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "json1",
+            "placeholder": {
+              "en": "Json 1",
+              "nl": "Json  1"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_json2",
+            "placeholder": {
+              "en": "Property Path Json 2",
+              "nl": "Eigenschap Pad Json 2"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "json2",
+            "placeholder": {
+              "en": "Json 2",
+              "nl": "Json  2"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_json3",
+            "placeholder": {
+              "en": "Property Path Json 3",
+              "nl": "Eigenschap Pad Json 3"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "json3",
+            "placeholder": {
+              "en": "Json 3",
+              "nl": "Json  3"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_json4",
+            "placeholder": {
+              "en": "Property Path Json 4",
+              "nl": "Eigenschap Pad Json 4"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "json4",
+            "placeholder": {
+              "en": "Json 4",
+              "nl": "Json  4"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_json5",
+            "placeholder": {
+              "en": "Property Path Json 5",
+              "nl": "Eigenschap Pad Json 5"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "json5",
+            "placeholder": {
+              "en": "Json 5",
+              "nl": "Json  5"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_json6",
+            "placeholder": {
+              "en": "Property Path Json 6",
+              "nl": "Eigenschap Pad Json 6"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "json6",
+            "placeholder": {
+              "en": "Json 6",
+              "nl": "Json  6"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_json7",
+            "placeholder": {
+              "en": "Property Path Json 7",
+              "nl": "Eigenschap Pad Json 7"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "json7",
+            "placeholder": {
+              "en": "Json 7",
+              "nl": "Json  7"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_json8",
+            "placeholder": {
+              "en": "Property Path Json 8",
+              "nl": "Eigenschap Pad Json 8"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "json8",
+            "placeholder": {
+              "en": "Json 8",
+              "nl": "Json  8"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_json9",
+            "placeholder": {
+              "en": "Property Path Json 9",
+              "nl": "Eigenschap Pad Json 9"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "json9",
+            "placeholder": {
+              "en": "Json 9",
+              "nl": "Json  9"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "property_json10",
+            "placeholder": {
+              "en": "Property Path Json 10",
+              "nl": "Eigenschap Pad Json 10"
+            },
+            "required": false
+          },
+          {
+            "type": "text",
+            "name": "json10",
+            "placeholder": {
+              "en": "Json 10",
+              "nl": "Json  10"
+            },
+            "required": false
+          }
+        ]
+      }
+    ]
+  }
+}

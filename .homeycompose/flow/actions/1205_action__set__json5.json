@@ -1,0 +1,119 @@
+{
+    "id": "action__set__json5",
+    "title": {
+        "en": "Build JSON (5 Json's)",
+        "nl": "Bouw JSON (5 Json's)"
+    },
+    "titleFormatted": {
+        "en": "Build JSON ([[json]]) [[property_json1]]=[[json1]], [[property_json2]]=[[json2]], [[property_json3]]=[[json3]], [[property_json4]]=[[json4]], [[property_json5]]=[[json5]]",
+        "nl": "Bouw JSON ([[json]]) [[property_json1]]=[[json1]], [[property_json2]]=[[json2]], [[property_json3]]=[[json3]], [[property_json4]]=[[json4]], [[property_json5]]=[[json5]]"
+    },
+    "tokens": [
+        {
+            "type": "string",
+            "name": "json",
+            "title": {
+                "en": "JSON",
+                "nl": " JSON"
+            }
+        }
+    ],
+    "args": [
+        {
+            "type": "text",
+            "name": "json",
+            "placeholder": {
+                "en": "Existing JSON",
+                "nl": " Bestaande JSON"
+            },
+            "required":false
+        },
+
+        {
+            "type": "text",
+            "name": "property_json1",
+            "placeholder": {
+                "en": "Property Path Json 1",
+                "nl": "Eigenschap Pad Json 1"
+            },
+            "required":false
+        },
+        {
+            "type": "text",
+            "name": "json1",
+            "placeholder": {
+                "en": "Json 1",
+                "nl": "Json  1"
+            },
+            "required":false
+        },{
+            "type": "text",
+            "name": "property_json2",
+            "placeholder": {
+                "en": "Property Path Json 2",
+                "nl": "Eigenschap Pad Json 2"
+            },
+            "required":false
+        },
+        {
+            "type": "text",
+            "name": "json2",
+            "placeholder": {
+                "en": "Json 2",
+                "nl": "Json  2"
+            },
+            "required":false
+        },{
+            "type": "text",
+            "name": "property_json3",
+            "placeholder": {
+                "en": "Property Path Json 3",
+                "nl": "Eigenschap Pad Json 3"
+            },
+            "required":false
+        },
+        {
+            "type": "text",
+            "name": "json3",
+            "placeholder": {
+                "en": "Json 3",
+                "nl": "Json  3"
+            },
+            "required":false
+        },{
+            "type": "text",
+            "name": "property_json4",
+            "placeholder": {
+                "en": "Property Path Json 4",
+                "nl": "Eigenschap Pad Json 4"
+            },
+            "required":false
+        },
+        {
+            "type": "text",
+            "name": "json4",
+            "placeholder": {
+                "en": "Json 4",
+                "nl": "Json  4"
+            },
+            "required":false
+        },{
+            "type": "text",
+            "name": "property_json5",
+            "placeholder": {
+                "en": "Property Path Json 5",
+                "nl": "Eigenschap Pad Json 5"
+            },
+            "required":false
+        },
+        {
+            "type": "text",
+            "name": "json5",
+            "placeholder": {
+                "en": "Json 5",
+                "nl": "Json  5"
+            },
+            "required":false
+        }
+    ]
+}
