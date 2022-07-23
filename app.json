@@ -1,7 +1,7 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "nl.qluster-it.JsonHandler",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "brandColor": "#730000",
@@ -124,7 +124,7 @@
             "required": false
           },
           {
-            "type": "text",
+            "type": "checkbox",
             "name": "boolean1",
             "placeholder": {
               "en": "Yes/No 1",
@@ -282,7 +282,7 @@
             "required": false
           },
           {
-            "type": "text",
+            "type": "checkbox",
             "name": "boolean1",
             "placeholder": {
               "en": "Yes/No 1",
@@ -300,7 +300,7 @@
             "required": false
           },
           {
-            "type": "text",
+            "type": "checkbox",
             "name": "boolean2",
             "placeholder": {
               "en": "Yes/No 2",
@@ -318,7 +318,7 @@
             "required": false
           },
           {
-            "type": "text",
+            "type": "checkbox",
             "name": "boolean3",
             "placeholder": {
               "en": "Yes/No 3",
@@ -548,7 +548,7 @@
             "required": false
           },
           {
-            "type": "text",
+            "type": "checkbox",
             "name": "boolean1",
             "placeholder": {
               "en": "Yes/No 1",
@@ -566,7 +566,7 @@
             "required": false
           },
           {
-            "type": "text",
+            "type": "checkbox",
             "name": "boolean2",
             "placeholder": {
               "en": "Yes/No 2",
@@ -584,7 +584,7 @@
             "required": false
           },
           {
-            "type": "text",
+            "type": "checkbox",
             "name": "boolean3",
             "placeholder": {
               "en": "Yes/No 3",
@@ -602,7 +602,7 @@
             "required": false
           },
           {
-            "type": "text",
+            "type": "checkbox",
             "name": "boolean4",
             "placeholder": {
               "en": "Yes/No 4",
@@ -620,7 +620,7 @@
             "required": false
           },
           {
-            "type": "text",
+            "type": "checkbox",
             "name": "boolean5",
             "placeholder": {
               "en": "Yes/No 5",
@@ -1030,7 +1030,7 @@
             "required": false
           },
           {
-            "type": "text",
+            "type": "checkbox",
             "name": "boolean1",
             "placeholder": {
               "en": "Yes/No 1",
@@ -1048,7 +1048,7 @@
             "required": false
           },
           {
-            "type": "text",
+            "type": "checkbox",
             "name": "boolean2",
             "placeholder": {
               "en": "Yes/No 2",
@@ -1066,7 +1066,7 @@
             "required": false
           },
           {
-            "type": "text",
+            "type": "checkbox",
             "name": "boolean3",
             "placeholder": {
               "en": "Yes/No 3",
@@ -1084,7 +1084,7 @@
             "required": false
           },
           {
-            "type": "text",
+            "type": "checkbox",
             "name": "boolean4",
             "placeholder": {
               "en": "Yes/No 4",
@@ -1102,7 +1102,7 @@
             "required": false
           },
           {
-            "type": "text",
+            "type": "checkbox",
             "name": "boolean5",
             "placeholder": {
               "en": "Yes/No 5",
@@ -1120,7 +1120,7 @@
             "required": false
           },
           {
-            "type": "text",
+            "type": "checkbox",
             "name": "boolean6",
             "placeholder": {
               "en": "Yes/No 6",
@@ -1138,7 +1138,7 @@
             "required": false
           },
           {
-            "type": "text",
+            "type": "checkbox",
             "name": "boolean7",
             "placeholder": {
               "en": "Yes/No 7",
@@ -1156,7 +1156,7 @@
             "required": false
           },
           {
-            "type": "text",
+            "type": "checkbox",
             "name": "boolean8",
             "placeholder": {
               "en": "Yes/No 8",
@@ -1174,7 +1174,7 @@
             "required": false
           },
           {
-            "type": "text",
+            "type": "checkbox",
             "name": "boolean9",
             "placeholder": {
               "en": "Yes/No 9",
@@ -1192,7 +1192,7 @@
             "required": false
           },
           {
-            "type": "text",
+            "type": "checkbox",
             "name": "boolean10",
             "placeholder": {
               "en": "Yes/No 10",
