@@ -145,7 +145,7 @@
             "required":false
         },
         {
-            "type": "text",
+            "type": "checkbox",
             "name": "boolean1",
             "placeholder": {
                 "en": "Yes/No 1",
@@ -162,7 +162,7 @@
             "required":false
         },
         {
-            "type": "text",
+            "type": "checkbox",
             "name": "boolean2",
             "placeholder": {
                 "en": "Yes/No 2",
@@ -179,7 +179,7 @@
             "required":false
         },
         {
-            "type": "text",
+            "type": "checkbox",
             "name": "boolean3",
             "placeholder": {
                 "en": "Yes/No 3",
