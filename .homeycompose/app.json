@@ -1,6 +1,6 @@
 {
   "id": "nl.qluster-it.JsonHandler",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "brandColor": "#730000",
@@ -14,7 +14,15 @@
     "en": "JSON handler and manipulator"
   },
   "tags": {
-    "en": ["JSON", "Advanced", "Handler", "Manipulator"]
+    "en": [
+      "json",
+      "advanced",
+      "flows",
+      "handler",
+      "manipulator",
+      "homeyscript",
+      "arguments"
+    ]
   },
   "category": [
     "tools"
