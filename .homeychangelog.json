@@ -10,5 +10,8 @@
   },
   "1.0.8": {
     "en": ""
+  },
+  "1.1.0": {
+    "en": "Bugfixed index array getters"
   }
 }

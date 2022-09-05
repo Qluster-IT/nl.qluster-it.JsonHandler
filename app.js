@@ -103,10 +103,19 @@ class MyApp extends Homey.App {
     let paths = path.split('.');
     var activeObj = json;
     for (let i = 0; i < paths.length; i++) {
-      if(i==paths.length-1) return activeObj[paths[i]];
-      else if (activeObj[paths[i]]) {
-        activeObj = activeObj[paths[i]];
-      } else return retur;
+      if(paths[i].indexOf('[')>-1) {
+        let pathArr = paths[i].split('[');
+        let _path = pathArr[0];
+        let _index = Number.parseInt(pathArr[1].split(']')[0]);
+        
+        if(i==paths.length-1) return activeObj[_path][_index];
+        else if (activeObj[_path][_index]) activeObj = activeObj[_path][_index];
+        else return retur;
+      } else {
+        if(i==paths.length-1) return activeObj[paths[i]];
+        else if (activeObj[paths[i]]) activeObj = activeObj[paths[i]];
+         else return retur;
+      }
     }
     return retur;
   }
