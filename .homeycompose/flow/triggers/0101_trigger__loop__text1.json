@@ -22,15 +22,47 @@
             }
         }
     ],
-    "tokens": [        
+    "tokens": [
         {
             "type": "string",
-            "name": "loopvalue",
+            "name": "loopvaluestring",
             "title": {
-                "en": "Loop value",
-                "nl": "Loop waarde"
+                "en": "Value text",
+                "nl": "Waarde tekst"
             }
-        },        
+        },
+        {
+            "type": "number",
+            "name": "loopvaluenumber",
+            "title": {
+                "en": "Value number",
+                "nl": "Waarde nummer"
+            }
+        },
+        {
+            "type": "boolean",
+            "name": "loopvalueboolean",
+            "title": {
+                "en": "Value yes/no",
+                "nl": "Waarde ja/nee"
+            }
+        },
+        {
+            "type": "string",
+            "name": "loopkey",
+            "title": {
+                "en": "Key",
+                "nl": "Sleutel"
+            }
+        },
+        {
+            "type": "number",
+            "name": "loopindex",
+            "title": {
+                "en": "Index",
+                "nl": "Index"
+            }
+        },
         {
             "type": "string",
             "name": "text1",

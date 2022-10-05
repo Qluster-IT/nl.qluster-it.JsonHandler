@@ -87,7 +87,7 @@ class MyApp extends Homey.App {
 
 
 
-    //#region Triggercards
+    //#region Triggercards Looper
     var triggersLoop = this.triggers = [
       { id: 'trigger__loop__text1' }
     ];
@@ -98,7 +98,8 @@ class MyApp extends Homey.App {
       this.setCounts(trigger);
 
       triggerCard.registerRunListener(async (args, state, more) => { //async
-        return (trigger.id.startsWith('trigger_loop__text' + state.textCount + '_number' + state.numberCount + '_boolean' + state.booleanCount) || args.overloadable == 'true');        
+        let s = 'trigger__loop__text' + state.textCount + (state.numberCount ? '_number' + state.numberCount : '') + (state.booleanCount? '_boolean' + state.booleanCount : '');
+        return (trigger.id.startsWith('trigger__loop__text' + state.textCount + (state.numberCount ? '_number' + state.numberCount : '') + (state.booleanCount? '_boolean' + state.booleanCount : '')) || args.overloadable == 'true');        
       });
       triggerCard.getArgument('name').registerAutocompleteListener(async (query, args) => {
         try {
@@ -112,7 +113,7 @@ class MyApp extends Homey.App {
     }
     //#endregion
 
-    //#region Actioncards
+    //#region Actioncards Looper
     var actionsLoop = this.actions = [
       { id: 'action__loop__text1' }
     ];
@@ -124,7 +125,7 @@ class MyApp extends Homey.App {
       var triggername = action.id.replace('action_', 'trigger_');
       action.triggerCard = _.find(triggersLoop, x => { return x.id == triggername; });
       action.triggerCard.actionCard = action;
-      actionCard.registerRunListener(((args, state, more) => { //async
+      actionCard.registerRunListener(async (args, state, more) => { //async
         var defer = new Defer();
         try {
           //console.log(action.id + '.registerRunListener args: ');
@@ -132,15 +133,6 @@ class MyApp extends Homey.App {
           let newArgs = { name: args.name || { name: args.namebytag } };
           delete args.name;
 
-          if (action.id == 'action_none') {
-            if (args.number === undefined) args.number = 0;
-            if (args.boolean === undefined) args.boolean = false;
-            if (args.text === undefined) args.text = "";
-            action.triggerCard.card.trigger(args, newArgs).then((x, y) => {
-              defer.resolve(true);
-
-            }).catch(err => { defer.reject(err); });
-          } else if (action.id.startsWith('action__')) {
             if (!this.returns) this.returns = {};
             if (!this.returns[newArgs.name.name]) this.returns[newArgs.name.name] = { count: 0, list: {} };
             args.flowexecutionid = this.returns[newArgs.name.name].count += 1;
@@ -156,30 +148,60 @@ class MyApp extends Homey.App {
             }
             var promises = [];
             var triggerCards = _.filter(this.triggers, x => { return !x.deprecated && x.textCount >= action.triggerCard.textCount && x.numberCount >= action.triggerCard.numberCount && x.booleanCount >= action.triggerCard.booleanCount; });
-            for (let i = 0; i < triggerCards.length; i++) {
-              const triggerCard = triggerCards[i];
-              for (let j = 1; j <= triggerCard.textCount; j++) if (args['text' + j.toString()] === undefined) args['text' + j.toString()] = "";
-              for (let j = 1; j <= triggerCard.numberCount; j++) if (args['number' + j.toString()] === undefined) args['number' + j.toString()] = 0;
-              for (let j = 1; j <= triggerCard.booleanCount; j++) if (args['boolean' + j.toString()] === undefined) args['boolean' + j.toString()] = false;
+            let loop = JSON.parse(args.loop);
+            let loopIsArray = _.isArray(loop);
+            
+            let previousPromise = null;
+            const fc = async (val, key, triggerCard)=>{
+              args.loopvaluestring = '';
+              args.loopvaluenumber = -1;
+              args.loopvalueboolean = false;
+              switch (typeof(val)) {
+                case 'string':args.loopvaluestring = val; break;
+                case 'number':args.loopvaluenumber = val; break;
+                case 'boolean':args.loopvalueboolean = val; break;
+                default: args.loopvaluestring = JSON.stringify(val);
+              }  
+              args.loopkey = !loopIsArray ? key : key.toString();
+              args.loopindex =loopIsArray? key : -1;
+              if(previousPromise) await previousPromise;
               const p = triggerCard.card.trigger(args, { name: newArgs.name, textCount: action.textCount, numberCount: action.numberCount, booleanCount: action.booleanCount, uniqueId: this.uniqueId++ });
+              previousPromise = p;
+
               promises.push(p);
               if (event && event.promises) {
                 if(!event.promises[triggerCard.id]) event.promises[triggerCard.id] = [];
                 event.promises[triggerCard.id].push(p);
                 p.then(()=> {event.promises[triggerCard.id].shift(); }).catch(()=> { event.promises[triggerCard.id].shift();} );              
               }
+            };
+            for (let i = 0; i < triggerCards.length; i++) {
+              const triggerCard = triggerCards[i];
+              for (let j = 1; j <= triggerCard.textCount; j++) if (args['text' + j.toString()] === undefined) args['text' + j.toString()] = "";
+              for (let j = 1; j <= triggerCard.numberCount; j++) if (args['number' + j.toString()] === undefined) args['number' + j.toString()] = 0;
+              for (let j = 1; j <= triggerCard.booleanCount; j++) if (args['boolean' + j.toString()] === undefined) args['boolean' + j.toString()] = false;
+              
+              if(_.isArray(loop)) for (let i = 0; i < loop.length; i++) {
+                const element = loop[i];
+                await fc(element, i, triggerCard);
+              } else if(_.isObject(loop)) 
+              for (const key in loop) {
+                if (Object.hasOwnProperty.call(loop, key)) {
+                  const element = loop[key];
+                  await fc(element, key, triggerCard);                  
+                }
+              }
             }
             let tokens = {};
-            for (let j = 1; j <= 10; j++) if (tokens['text' + j.toString()] === undefined) tokens['text' + j.toString()] = "";
-            for (let j = 1; j <= 10; j++) if (tokens['number' + j.toString()] === undefined) tokens['number' + j.toString()] = 0;
-            for (let j = 1; j <= 10; j++) if (tokens['boolean' + j.toString()] === undefined) tokens['boolean' + j.toString()] = false;
+            // for (let j = 1; j <= 10; j++) if (tokens['text' + j.toString()] === undefined) tokens['text' + j.toString()] = "";
+            // for (let j = 1; j <= 10; j++) if (tokens['number' + j.toString()] === undefined) tokens['number' + j.toString()] = 0;
+            // for (let j = 1; j <= 10; j++) if (tokens['boolean' + j.toString()] === undefined) tokens['boolean' + j.toString()] = false;
 
             if (args.waittofinish === false) {
               defer.resolve(tokens);
               delete this.returns[newArgs.name.name].list[this.returns[newArgs.name.name].count];
             }
             else {
-
               Promise.all(promises)
                 .then(x => {
                   let a = recievedTokens;
@@ -191,14 +213,12 @@ class MyApp extends Homey.App {
                   delete this.returns[newArgs.name.name].list[this.returns[newArgs.name.name].count];
                 });
             }
-          }
-
         } catch (error) {
           console.log('Error: ' + error);
           defer.reject(error);
         }
         return defer.promise;
-      }).bind(this));
+      });
 
       actionCard.getArgument('name').registerAutocompleteListener(async (query, args) => {
         try {
@@ -216,6 +236,12 @@ class MyApp extends Homey.App {
     //#endregion
   }
 
+
+  sleep(ms) {
+    return new Promise((resolve) => {
+      setTimeout(resolve, ms);
+    });
+  }
 
   setCounts(card) {
     card.textCount = card.numberCount = card.booleanCount = card.jsonCount = 0;
@@ -288,17 +314,6 @@ class MyApp extends Homey.App {
         }
         event.arguments.push(argumentValue);
       }
-    }
-  }
-
-  setCounts(card) {
-    card.textCount = card.numberCount = card.booleanCount = 0;
-    var arrArgumentTypes = card.id.split('_');
-    for (let i = 2; i < arrArgumentTypes.length; i++) {
-      const type = arrArgumentTypes[i];
-      if (type.startsWith('text')) card.textCount = Number.parseInt(type.replace('text', ''));
-      else if (type.startsWith('number')) card.numberCount = Number.parseInt(type.replace('number', ''));
-      else if (type.startsWith('boolean')) card.booleanCount = Number.parseInt(type.replace('boolean', ''));
     }
   }
 

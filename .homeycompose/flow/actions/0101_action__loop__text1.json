@@ -40,8 +40,8 @@
             "type": "text",
             "name": "loop",
             "title": {
-                "en": "Loop",
-                "nl": "Loop"
+                "en": "Collection",
+                "nl": "Verzameling"
             },
             "placeholder": {
                 "en": "[1,2,3,4,5,6,7,8]",
