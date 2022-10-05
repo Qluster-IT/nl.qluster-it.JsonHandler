@@ -1,0 +1,70 @@
+{
+    "id": "action__loop__text1",
+    "advanced":true,
+    "title": {
+        "en": "Start Flowcard with Loop",
+        "nl": "Start Flowkaart met Loop"
+    },
+    "titleFormatted": {
+        "en": "Start [[name]]/[[namebytag]] by [[loop]] with ([[text1]]) and Set Wait to Finish to [[waittofinish]]",
+        "nl": "Start [[name]]/[[namebytag]] door [[loop]] met ([[text1]]) en zet wacht op gereed op [[waittofinish]]"
+    },
+    "args": [
+        {
+            "type": "autocomplete",
+            "required":false,
+            "name": "name",
+            "placeholder": {
+                "en": "Type or select a loop name",
+                "nl": "Type of kies een loop naam"
+            },
+            "title": {
+                "en": "Triggername",
+                "nl": "Triggernaam"
+            }
+        },
+        {
+            "type": "text",
+            "required":false,
+            "name": "namebytag",
+            "placeholder": {
+                "en": "Or use a Tag or text as name",
+                "nl": "Of gebruik een Tag of tekst als naam"
+            },
+            "title": {
+                "en": "Tag",
+                "nl": "Tag"
+            }
+        },
+        {
+            "type": "text",
+            "name": "loop",
+            "title": {
+                "en": "Loop",
+                "nl": "Loop"
+            },
+            "placeholder": {
+                "en": "[1,2,3,4,5,6,7,8]",
+                "nl": "[1,2,3,4,5,6,7,8]"
+            }
+        },
+        {
+            "type": "text",
+            "name": "text1",
+            "placeholder": {
+                "en": "Text 1",
+                "nl": "Tekst 1"
+            },
+            "required":false
+        },
+        {
+            "type": "checkbox",
+            "name": "waittofinish",
+            "placeholder": {
+                "en": "Yes",
+                "nl": "Ja"
+            },
+            "required":false
+        }
+    ]    
+}

@@ -1,0 +1,43 @@
+{
+    "id": "trigger__loop__text1",
+    "title": {
+        "en": "This Flowcard started",
+        "nl": "Deze Flowkaart is gestart"
+    },
+    "titleFormatted": {
+        "en": "[[name]] started (loopvalue, 1 text)",
+        "nl": "[[name]] is gestart (loopvalue, 1 tekst)"
+    },
+    "args": [
+        {
+            "type": "autocomplete",
+            "name": "name",
+            "placeholder": {
+                "en": "Type or select a trigger name",
+                "nl": "Type of kies een trigger naam"
+            },
+            "title": {
+                "en": "Triggername",
+                "nl": "Triggernaam"
+            }
+        }
+    ],
+    "tokens": [        
+        {
+            "type": "string",
+            "name": "loopvalue",
+            "title": {
+                "en": "Loop value",
+                "nl": "Loop waarde"
+            }
+        },        
+        {
+            "type": "string",
+            "name": "text1",
+            "title": {
+                "en": "Text 1",
+                "nl": "Tekst 1"
+            }
+        }
+    ]
+}
