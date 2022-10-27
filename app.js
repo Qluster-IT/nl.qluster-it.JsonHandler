@@ -99,7 +99,7 @@ class MyApp extends Homey.App {
 
       triggerCard.registerRunListener(async (args, state, more) => { //async
         let s = 'trigger__loop__text' + state.textCount + (state.numberCount ? '_number' + state.numberCount : '') + (state.booleanCount? '_boolean' + state.booleanCount : '');
-        return (trigger.id.startsWith('trigger__loop__text' + state.textCount + (state.numberCount ? '_number' + state.numberCount : '') + (state.booleanCount? '_boolean' + state.booleanCount : '')) || args.overloadable == 'true');        
+        return args.name.name==state.name.name && (trigger.id.startsWith(s) || args.overloadable == 'true');        
       });
       triggerCard.getArgument('name').registerAutocompleteListener(async (query, args) => {
         try {
