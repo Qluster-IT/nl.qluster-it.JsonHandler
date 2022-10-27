@@ -243,18 +243,6 @@ class MyApp extends Homey.App {
     });
   }
 
-  setCounts(card) {
-    card.textCount = card.numberCount = card.booleanCount = card.jsonCount = 0;
-      var arrArgumentTypes = _.last(card.id.split('__')).split('_');
-      for (let i = 0; i < arrArgumentTypes.length; i++) {
-        const type = arrArgumentTypes[i];
-        if(type.startsWith('text')) card.textCount = Number.parseInt(type.replace('text',''));
-        else if(type.startsWith('number')) card.numberCount = Number.parseInt(type.replace('number',''));
-        else if(type.startsWith('boolean')) card.booleanCount = Number.parseInt(type.replace('boolean',''));    
-        else if(type.startsWith('json')) card.jsonCount = Number.parseInt(type.replace('json',''));    
-      }
-  }
-
   getJsonValue(json, path, retur) {
     if((json===undefined || json===null) || (path===undefined || path===null)) return retur;
     let paths = path.split('.');
@@ -293,6 +281,19 @@ class MyApp extends Homey.App {
 
 
   //#region Functions the same as AdvancedTriggers
+  
+  setCounts(card) {
+    card.textCount = card.numberCount = card.booleanCount = card.jsonCount = 0;
+      var arrArgumentTypes = _.last(card.id.split('__')).split('_');
+      for (let i = 0; i < arrArgumentTypes.length; i++) {
+        const type = arrArgumentTypes[i];
+        if(type.startsWith('text')) card.textCount = Number.parseInt(type.replace('text',''));
+        else if(type.startsWith('number')) card.numberCount = Number.parseInt(type.replace('number',''));
+        else if(type.startsWith('boolean')) card.booleanCount = Number.parseInt(type.replace('boolean',''));    
+        else if(type.startsWith('json')) card.jsonCount = Number.parseInt(type.replace('json',''));    
+      }
+  }
+
 
   async setArgumentValues(cardObject, cardCard) {
     cardObject.argumentValues = await cardCard.getArgumentValues();

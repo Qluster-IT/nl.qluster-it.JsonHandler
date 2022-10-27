@@ -58,8 +58,8 @@
           "nl": "Deze Flowkaart is gestart"
         },
         "titleFormatted": {
-          "en": "[[name]] started (loopvalue, 1 text)",
-          "nl": "[[name]] is gestart (loopvalue, 1 tekst)"
+          "en": "[[name]] started with item (1 text)",
+          "nl": "[[name]] is gestart met item, (1 tekst)"
         },
         "args": [
           {
@@ -80,24 +80,24 @@
             "type": "string",
             "name": "loopvaluestring",
             "title": {
-              "en": "Value text",
-              "nl": "Waarde tekst"
+              "en": "Item text",
+              "nl": "Item tekst"
             }
           },
           {
             "type": "number",
             "name": "loopvaluenumber",
             "title": {
-              "en": "Value number",
-              "nl": "Waarde nummer"
+              "en": "Item number",
+              "nl": "Item nummer"
             }
           },
           {
             "type": "boolean",
             "name": "loopvalueboolean",
             "title": {
-              "en": "Value yes/no",
-              "nl": "Waarde ja/nee"
+              "en": "Item yes/no",
+              "nl": "Item ja/nee"
             }
           },
           {
@@ -136,8 +136,8 @@
           "nl": "Start Flowkaart met Loop"
         },
         "titleFormatted": {
-          "en": "Start [[name]]/[[namebytag]] by [[loop]] with ([[text1]]) and Set Wait to Finish to [[waittofinish]]",
-          "nl": "Start [[name]]/[[namebytag]] door [[loop]] met ([[text1]]) en zet wacht op gereed op [[waittofinish]]"
+          "en": "Start [[name]]/[[namebytag]] for each item in [[loop]] with ([[text1]]) and Set Wait to Finish to [[waittofinish]]",
+          "nl": "Start [[name]]/[[namebytag]] voor elke item in [[loop]] met ([[text1]]) en zet wacht op gereed op [[waittofinish]]"
         },
         "args": [
           {

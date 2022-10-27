@@ -6,8 +6,8 @@
         "nl": "Start Flowkaart met Loop"
     },
     "titleFormatted": {
-        "en": "Start [[name]]/[[namebytag]] by [[loop]] with ([[text1]]) and Set Wait to Finish to [[waittofinish]]",
-        "nl": "Start [[name]]/[[namebytag]] door [[loop]] met ([[text1]]) en zet wacht op gereed op [[waittofinish]]"
+        "en": "Start [[name]]/[[namebytag]] for each item in [[loop]] with ([[text1]]) and Set Wait to Finish to [[waittofinish]]",
+        "nl": "Start [[name]]/[[namebytag]] voor elke item in [[loop]] met ([[text1]]) en zet wacht op gereed op [[waittofinish]]"
     },
     "args": [
         {
