@@ -59,7 +59,7 @@
         },
         "titleFormatted": {
           "en": "[[name]] started with item (1 text)",
-          "nl": "[[name]] is gestart met item, (1 tekst)"
+          "nl": "[[name]] is gestart met item (1 tekst)"
         },
         "args": [
           {
