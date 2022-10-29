@@ -13,5 +13,11 @@
   },
   "1.1.0": {
     "en": "Bugfixed index array getters"
+  },
+  "1.2.0": {
+    "en": "Added: Loop throught Collection/Array card!"
+  },
+  "1.2.1": {
+    "en": "Improved: Loop throught JSON Collection/Array card!"
   }
 }

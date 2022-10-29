@@ -1,7 +1,7 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "nl.qluster-it.JsonHandler",
-  "version": "1.1.0",
+  "version": "1.2.1",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "brandColor": "#730000",
@@ -50,7 +50,154 @@
     "email": "arie@qluster-it.nl"
   },
   "flow": {
+    "triggers": [
+      {
+        "id": "trigger__loop__text1",
+        "title": {
+          "en": "This Flowcard started",
+          "nl": "Deze Flowkaart is gestart"
+        },
+        "titleFormatted": {
+          "en": "[[name]] started with item (1 text)",
+          "nl": "[[name]] is gestart met item (1 tekst)"
+        },
+        "args": [
+          {
+            "type": "autocomplete",
+            "name": "name",
+            "placeholder": {
+              "en": "Type or select a trigger name",
+              "nl": "Type of kies een trigger naam"
+            },
+            "title": {
+              "en": "Triggername",
+              "nl": "Triggernaam"
+            }
+          }
+        ],
+        "tokens": [
+          {
+            "type": "string",
+            "name": "loopvaluestring",
+            "title": {
+              "en": "Item text",
+              "nl": "Item tekst"
+            }
+          },
+          {
+            "type": "number",
+            "name": "loopvaluenumber",
+            "title": {
+              "en": "Item number",
+              "nl": "Item nummer"
+            }
+          },
+          {
+            "type": "boolean",
+            "name": "loopvalueboolean",
+            "title": {
+              "en": "Item yes/no",
+              "nl": "Item ja/nee"
+            }
+          },
+          {
+            "type": "string",
+            "name": "loopkey",
+            "title": {
+              "en": "Key",
+              "nl": "Sleutel"
+            }
+          },
+          {
+            "type": "number",
+            "name": "loopindex",
+            "title": {
+              "en": "Index",
+              "nl": "Index"
+            }
+          },
+          {
+            "type": "string",
+            "name": "text1",
+            "title": {
+              "en": "Text 1",
+              "nl": "Tekst 1"
+            }
+          }
+        ]
+      }
+    ],
     "actions": [
+      {
+        "id": "action__loop__text1",
+        "advanced": true,
+        "title": {
+          "en": "Start Flowcard with Loop",
+          "nl": "Start Flowkaart met Loop"
+        },
+        "titleFormatted": {
+          "en": "Start [[name]]/[[namebytag]] for each item in [[loop]] with ([[text1]]) and Set Wait to Finish to [[waittofinish]]",
+          "nl": "Start [[name]]/[[namebytag]] voor elke item in [[loop]] met ([[text1]]) en zet wacht op gereed op [[waittofinish]]"
+        },
+        "args": [
+          {
+            "type": "autocomplete",
+            "required": false,
+            "name": "name",
+            "placeholder": {
+              "en": "Type or select a loop name",
+              "nl": "Type of kies een loop naam"
+            },
+            "title": {
+              "en": "Triggername",
+              "nl": "Triggernaam"
+            }
+          },
+          {
+            "type": "text",
+            "required": false,
+            "name": "namebytag",
+            "placeholder": {
+              "en": "Or use a Tag or text as name",
+              "nl": "Of gebruik een Tag of tekst als naam"
+            },
+            "title": {
+              "en": "Tag",
+              "nl": "Tag"
+            }
+          },
+          {
+            "type": "text",
+            "name": "loop",
+            "title": {
+              "en": "Collection",
+              "nl": "Verzameling"
+            },
+            "placeholder": {
+              "en": "[1,2,3,4,5,6,7,8]",
+              "nl": "[1,2,3,4,5,6,7,8]"
+            }
+          },
+          {
+            "type": "text",
+            "name": "text1",
+            "placeholder": {
+              "en": "Text 1",
+              "nl": "Tekst 1"
+            },
+            "required": false
+          },
+          {
+            "type": "checkbox",
+            "name": "waittofinish",
+            "placeholder": {
+              "en": "Yes",
+              "nl": "Ja"
+            },
+            "required": false
+          }
+        ]
+      },
       {
         "id": "action__set__text1_number1_boolean1",
         "title": {
