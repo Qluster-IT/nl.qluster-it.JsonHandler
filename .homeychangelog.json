@@ -19,5 +19,8 @@
   },
   "1.2.1": {
     "en": "Improved: Loop throught JSON Collection/Array card!"
+  },
+  "1.2.2": {
+    "en": "Added: Contribution options: Patreon and GithubSponsors (with PayPal already available)."
   }
 }
