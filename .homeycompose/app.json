@@ -1,6 +1,6 @@
 {
   "id": "nl.qluster-it.JsonHandler",
-  "version": "1.2.1",
+  "version": "1.2.3",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "brandColor": "#730000",
@@ -37,13 +37,19 @@
     "url": "https://bitbucket.org/QlusterIT/nl.qluster-it.jsonhandler/issues"
   },
   "homeyCommunityTopicId": 66317,
-  "contributing": {
-    "donate": {
-      "paypal": {
-        "username": "QlusterIT"
+	"contributing": {
+		"donate": {
+			"paypal": {
+				"username": "QlusterIT"
+			},
+      "patreon": {
+				"username": "QlusterIT"
+			},
+      "githubSponsors": {
+        "username": "XeroxQ"
       }
-    }
-  },
+		}
+	},
   "author": {
     "name": "Arie J. Godschalk",
     "email": "arie@qluster-it.nl"
