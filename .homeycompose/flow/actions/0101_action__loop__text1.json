@@ -6,8 +6,8 @@
         "nl": "Start Flowkaart met Loop"
     },
     "titleFormatted": {
-        "en": "Start [[name]]/[[namebytag]] for each item in [[loop]] with ([[text1]]) and Set Wait to Finish to [[waittofinish]]",
-        "nl": "Start [[name]]/[[namebytag]] voor elke item in [[loop]] met ([[text1]]) en zet wacht op gereed op [[waittofinish]]"
+        "en": "Start [[name]]/[[namebytag]] for each item in [[loop]] with (optional: [[text1]]) and Set Wait to Finish to [[waittofinish]]",
+        "nl": "Start [[name]]/[[namebytag]] voor elke item in [[loop]] met (optioneel: [[text1]]) en zet wacht op gereed op [[waittofinish]]"
     },
     "args": [
         {
@@ -19,8 +19,8 @@
                 "nl": "Type of kies een loop naam"
             },
             "title": {
-                "en": "Triggername",
-                "nl": "Triggernaam"
+                "en": "Loopnaam",
+                "nl": "Loopnaam"
             }
         },
         {
