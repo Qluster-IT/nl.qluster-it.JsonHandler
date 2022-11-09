@@ -25,5 +25,8 @@
   },
   "1.2.3": {
     "en": "Improved: Flowcard descriptions."
+  },
+  "1.2.4": {
+    "en": "Bugfixed: Empty paths."
   }
 }
