@@ -28,5 +28,8 @@
   },
   "1.2.4": {
     "en": "Bugfixed: Empty paths."
+  },
+  "1.2.5": {
+    "en": "Improved: Works with Early 2023!"
   }
 }
