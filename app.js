@@ -243,26 +243,16 @@ class MyApp extends Homey.App {
     });
   }
 
-  getJsonValue(json, path, retur) {
-    if((json===undefined || json===null) || (path===undefined || path===null || path==='')) return retur;
-    let paths = path.split('.');
-    var activeObj = json;
-    for (let i = 0; i < paths.length; i++) {
-      if(paths[i].indexOf('[')>-1) {
-        let pathArr = paths[i].split('[');
-        let _path = pathArr[0];
-        let _index = Number.parseInt(pathArr[1].split(']')[0]);
-        
-        if(i==paths.length-1) return activeObj[_path][_index];
-        else if (activeObj[_path][_index]) activeObj = activeObj[_path][_index];
-        else return retur;
-      } else {
-        if(i==paths.length-1) return activeObj[paths[i]];
-        else if (activeObj[paths[i]]) activeObj = activeObj[paths[i]];
-         else return retur;
-      }
+  getJsonValue(json, path, _default) {
+    if(!path) return _default;
+    try {
+      let jsonObject = json;// JSON.parse(json);
+      return eval('jsonObject.' + path);
+  
+    }catch (ex) {
+      console.log(ex);
+      return _default;
     }
-    return retur;
   }
 
   setJson(json, path, value) {
