@@ -247,8 +247,10 @@ class MyApp extends Homey.App {
   getJsonValue(json, path, _default) {
     if(!path) return _default;
     try {
-      path = (path.trim().startsWith('$.')?'':'$.') + path;
-      return jp.value(json, path);
+      path = (path.trim().startsWith('$')?'':'$.') + path;
+      let result = jp.value(json, path);
+      this.log('result', typeof(result), result);
+      return result;
       //let jsonObject = json;
       //return eval('jsonObject' + (path.trim().startsWith('[')?'':'.') + path);
   
