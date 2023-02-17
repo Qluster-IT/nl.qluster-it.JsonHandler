@@ -3,6 +3,7 @@
 const Homey = require('homey');
 const { Defer } = require('./lib/proto');
 const _ = require('lodash');
+var jp = require('jsonpath');
 
 class MyApp extends Homey.App {
   static get lastName() { return this._lastName; }
@@ -246,8 +247,10 @@ class MyApp extends Homey.App {
   getJsonValue(json, path, _default) {
     if(!path) return _default;
     try {
-      let jsonObject = json;// JSON.parse(json);
-      return eval('jsonObject.' + path);
+      path = (path.trim().startsWith('$.')?'':'$.') + path;
+      return jp.value(json, path);
+      //let jsonObject = json;
+      //return eval('jsonObject' + (path.trim().startsWith('[')?'':'.') + path);
   
     }catch (ex) {
       console.log(ex);
