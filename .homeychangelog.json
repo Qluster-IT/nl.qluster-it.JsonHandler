@@ -28,5 +28,14 @@
   },
   "1.2.4": {
     "en": "Bugfixed: Empty paths."
+  },
+  "1.2.5": {
+    "en": "Improved: Works with Early 2023!"
+  },
+  "1.2.6": {
+    "en": "Improved: All types of object referencing is now accepted."
+  },
+  "1.2.8": {
+    "en": "Added: Paths are now handled through NPMs jsonpath."
   }
 }

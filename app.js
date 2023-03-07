@@ -3,6 +3,7 @@
 const Homey = require('homey');
 const { Defer } = require('./lib/proto');
 const _ = require('lodash');
+var jp = require('jsonpath');
 
 class MyApp extends Homey.App {
   static get lastName() { return this._lastName; }
@@ -16,11 +17,11 @@ class MyApp extends Homey.App {
     this.uniqueId = 0;
     
 
-    try {
-      if (process.env.DEBUG === '1') require('inspector').open(9222, '0.0.0.0', false);
-    } catch (error) {
+    // try {
+    //   if (process.env.DEBUG === '1') require('inspector').open(9222, '0.0.0.0', false);
+    // } catch (error) {
 
-    }
+    // }
 
     //#region Triggercards
 
@@ -243,26 +244,20 @@ class MyApp extends Homey.App {
     });
   }
 
-  getJsonValue(json, path, retur) {
-    if((json===undefined || json===null) || (path===undefined || path===null || path==='')) return retur;
-    let paths = path.split('.');
-    var activeObj = json;
-    for (let i = 0; i < paths.length; i++) {
-      if(paths[i].indexOf('[')>-1) {
-        let pathArr = paths[i].split('[');
-        let _path = pathArr[0];
-        let _index = Number.parseInt(pathArr[1].split(']')[0]);
-        
-        if(i==paths.length-1) return activeObj[_path][_index];
-        else if (activeObj[_path][_index]) activeObj = activeObj[_path][_index];
-        else return retur;
-      } else {
-        if(i==paths.length-1) return activeObj[paths[i]];
-        else if (activeObj[paths[i]]) activeObj = activeObj[paths[i]];
-         else return retur;
-      }
+  getJsonValue(json, path, _default) {
+    if(!path) return _default;
+    try {
+      path = (path.trim().startsWith('$')?'':'$.') + path;
+      let result = jp.value(json, path);
+      //this.log('result', typeof(result), result);
+      return result;
+      //let jsonObject = json;
+      //return eval('jsonObject' + (path.trim().startsWith('[')?'':'.') + path);
+  
+    }catch (ex) {
+      console.log(ex);
+      return _default;
     }
-    return retur;
   }
 
   setJson(json, path, value) {
