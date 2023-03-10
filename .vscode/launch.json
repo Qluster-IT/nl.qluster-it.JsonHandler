@@ -37,7 +37,7 @@
 			"type": "node",
 			"request": "attach",
 			"address": "192.168.1.17",
-			"port": 9218,
+			"port": 9208,
 			"localRoot": "${workspaceFolder}",
 			"remoteRoot": "/"
 		},
@@ -64,7 +64,7 @@
 			"type": "node",
 			"request": "attach",
 			"address": "192.168.1.239",
-			"port": 9218,
+			"port": 9208,
 			"localRoot": "${workspaceFolder}",
 			"remoteRoot": "/app/"
 		},
