@@ -16,12 +16,14 @@ class MyApp extends Homey.App {
     this.lastName = null;
     this.uniqueId = 0;
     
-
-    // try {
-    //   if (process.env.DEBUG === '1') require('inspector').open(9222, '0.0.0.0', false);
-    // } catch (error) {
-
-    // }
+    if (process.env.DEBUG === '1' || false) {
+			try {
+				require('inspector').waitForDebugger();
+			}
+			catch (error) {
+				require('inspector').open(9208, '0.0.0.0', true);
+			}
+		}
 
     //#region Triggercards
 
