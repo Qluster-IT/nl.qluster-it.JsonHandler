@@ -1,6 +1,6 @@
 {
   "id": "nl.qluster-it.JsonHandler",
-  "version": "1.2.9",
+  "version": "1.2.10",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "brandColor": "#730000",
@@ -32,9 +32,9 @@
     "small": "/assets/images/small.png",
     "large": "/assets/images/large.png"
   },
-  "source": "https://bitbucket.org/QlusterIT/nl.qluster-it.jsonhandler/",
+  "source": "https://github.com/Qluster-IT/nl.qluster-it.JsonHandler/",
   "bugs": {
-    "url": "https://bitbucket.org/QlusterIT/nl.qluster-it.jsonhandler/issues"
+    "url": "https://github.com/Qluster-IT/nl.qluster-it.JsonHandler/issues"
   },
   "homeyCommunityTopicId": 66317,
 	"contributing": {
